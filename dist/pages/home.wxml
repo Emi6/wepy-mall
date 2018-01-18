@@ -1,0 +1,74 @@
+
+  <view class="HomePage">
+    <block  wx:if="{{banners.length > 0}}">
+      <view class="banner">
+        <swiper class="swiper" indicator-dots="true" indicator-active-color="#1F9948" autoplay="true">
+          <block wx:for="{{banners}}" wx:for-index="index" wx:for-item="banner" wx:key="key">
+            <swiper-item>
+              <image class="swiper-image" src="" bindtap="handleBanner" data-wpyhandlebanner-a="{{index}}"/>
+            </swiper-item>
+          </block>
+        </swiper>
+      </view>
+    </block>
+    <block  wx:if="{{classIndexs.length > 0}}">
+      <view class="classifies">
+        <swiper style="height: 100%;" indicator-dots="true" indicator-active-color="#1F9948">
+          <block wx:for="{{classIndexs}}" wx:for-index="index" wx:for-item="classIndex" wx:key="key">
+            <swiper-item class="classify-swiper-item">
+              <block wx:for="{{classifies[classIndex]}}" wx:for-index="index" wx:for-item="classify" wx:key="key">
+                <view class="classify-item" bindtap="handleClassify" data-wpyhandleclassify-a="{{classify.name}}">
+                  <image class="classify-item-icon" src=""/>
+                  <text class="classify-item-text">{{classify.name}}</text>
+                </view>
+              </block>
+            </swiper-item>
+          </block>
+        </swiper>
+      </view>
+    </block>
+    
+  <view class="recommendHorizontal">
+    <view class="recommend-hd">
+      <view class="title">{{$recommendHorizontal$title}}</view>
+    </view>
+    <scroll-view class="recommend-bd" scroll-x="true" style="width: 100%;">
+      <block wx:for="{{$recommendHorizontal$goods}}" wx:for-index="$recommendHorizontal$index" wx:for-item="$recommendHorizontal$item" wx:key="$recommendHorizontal$key">
+        <view class="recommend-bd-item">
+          <view style="margin: 5px; border-radius: 3px; background: white; display: flex; flex-direction: column;">
+            <image class="recommend-bd-item-image" src=""/>
+            <view class="recommend-bd-item-cont">
+              <view class="good-title">商品说明文字商品说明文字商品说明</view>
+              <view class="good-disPirce">¥10.00</view>
+              <view class="good-price">¥12.00</view>
+            </view>
+          </view>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+
+    
+  <view class="recommendVerical">
+    <view class="recommend-hd">
+      <view class="line"/>
+      <view class="title">{{$recommendVertical$title}}</view>
+      <view class="line"/>
+    </view>
+    <view class="recommend-bd">
+      <block wx:for="{{$recommendVertical$goods}}" wx:for-index="$recommendVertical$index" wx:for-item="$recommendVertical$item" wx:key="$recommendVertical$key">
+        <view class="recommend-bd-item">
+          <view style="margin: 5px; border-radius: 3px; background: white; display: flex; flex-direction: column;">
+            <image class="recommend-bd-item-image" src=""/>
+            <view class="recommend-bd-item-cont">
+              <view class="good-title">商品说明文字商品说明文字</view>
+              <view class="good-disPirce">¥10.00</view>
+              <view class="good-price">¥12.00</view>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+
+  </view>

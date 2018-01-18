@@ -1,0 +1,118 @@
+
+  <view class="myPage">
+    <view class="header">
+      <image src="{{ userInfo.avatarUrl }}"/>
+      <view class="nickname">{{ userInfo.nickName }}</view>
+      <view class="rightArea">
+        <block  wx:if="{{rightType == 'text'}}">
+          <view class="text" bindtap="navigateTo" data-wpynavigateto-a="editUserInfo">编辑资料</view>
+        </block>
+        <block  wx:if="{{rightType == 'icon'}}">
+          <image class="icon" src="../images/icon_edit.png" bindtap="navigateTo" data-wpynavigateto-a="editUserInfo"/>
+        </block>
+      </view>
+    </view>
+    <view class="panel_container">
+      <view class="weui-panel" style="margin-top: 10px;">
+        <view class="weui-panel-dd">
+          <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" style="border-bottom: 1px solid #f2f2f2" bindtap="navigateTo" data-wpynavigateto-a="order">
+            <view class="weui-cell__bd">我的订单</view>
+            <view class="weui-cell__ft weui-cell__ft_in-access" style="font-size: 14px;">全部订单</view>
+          </view>
+          <view class="weui-panel-dd-rows">
+            <view class="weui-panel-dd-row" bindtap="navigateTo" data-wpynavigateto-a="order">
+              <image src="{{icon20}}" style="margin: 10px 0 5px 0;"/>
+              <view style="margin: 5px 0 10px 0;font-size: 14px;">待付款</view>
+            </view>
+            <view class="weui-panel-dd-row" bindtap="navigateTo" data-wpynavigateto-a="order">
+              <image src="{{icon20}}" style="margin: 10px 0 5px 0;"/>
+              <view style="margin: 5px 0 10px 0;font-size: 14px;">待收货</view>
+            </view>
+            <view class="weui-panel-dd-row" bindtap="navigateTo" data-wpynavigateto-a="order">
+              <image src="{{icon20}}" style="margin: 10px 0 5px 0;"/>
+              <view style="margin: 5px 0 10px 0;font-size: 14px;">待评价</view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="weui-panel" style="margin-top: 10px;">
+          <view class="weui-panel__bt">
+            <view class="weui-media-box weui-media-box_small-appmsg">
+              <view class="weui-cells weui-cells_in-small-appmsg">
+                <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" bindtap="navigateTo" data-wpynavigateto-a="order">
+                  <view class="weui-cell__hd">
+                    <image src="{{icon20}}" style="margin-right: 5px"/>
+                  </view>
+                  <view class="weui-cell__bd weui-cell_primary">
+                    <view>全部订单</view>
+                  </view>
+                  <view class="weui-cell__ft weui-cell__ft_in-access"/>
+                </view>
+                <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" bindtap="navigateTo" data-wpynavigateto-a="order">
+                  <view class="weui-cell__hd">
+                    <image src="{{icon20}}" style="margin-right: 5px"/>
+                  </view>
+                  <view class="weui-cell__bd weui-cell_primary">
+                    <view>待付款</view>
+                  </view>
+                  <view class="weui-cell__ft weui-cell__ft_in-access"/>
+                </view>
+                <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" bindtap="navigateTo" data-wpynavigateto-a="order">
+                  <view class="weui-cell__hd">
+                    <image src="{{icon20}}" style="margin-right: 5px"/>
+                  </view>
+                  <view class="weui-cell__bd weui-cell_primary">
+                    <view>待收货</view>
+                  </view>
+                  <view class="weui-cell__ft weui-cell__ft_in-access"/>
+                </view>
+              </view>
+            </view>
+          </view>
+      </view>
+      <view class="weui-panel" style="margin-top: 10px;">
+        <view class="weui-panel__bt">
+          <view class="weui-media-box weui-media-box_small-appmsg">
+            <view class="weui-cells weui-cells_in-small-appmsg">
+              <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" bindtap="navigateTo" data-wpynavigateto-a="coupon">
+                <view class="weui-cell__hd">
+                  <image src="{{icon20}}" style="margin-right: 5px"/>
+                </view>
+                <view class="weui-cell__bd weui-cell_primary">
+                  <view>优惠券</view>
+                </view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"/>
+              </view>
+              <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" bindtap="navigateTo" data-wpynavigateto-a="memCard">
+                <view class="weui-cell__hd">
+                  <image src="{{icon20}}" style="margin-right: 5px"/>
+                </view>
+                <view class="weui-cell__bd weui-cell_primary">
+                  <view>会员卡</view>
+                </view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"/>
+              </view>
+              <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" bindtap="navigateTo" data-wpynavigateto-a="collection">
+                <view class="weui-cell__hd">
+                  <image src="{{icon20}}" style="margin-right: 5px"/>
+                </view>
+                <view class="weui-cell__bd weui-cell_primary">
+                  <view>我的收藏</view>
+                </view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"/>
+              </view>
+              <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" bindtap="navigateTo" data-wpynavigateto-a="address">
+                <view class="weui-cell__hd">
+                  <image src="{{icon20}}" style="margin-right: 5px"/>
+                </view>
+                <view class="weui-cell__bd weui-cell_primary">
+                  <view>收货地址</view>
+                </view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"/>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>

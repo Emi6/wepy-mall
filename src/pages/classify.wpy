@@ -1,0 +1,44 @@
+<style lang="less">
+
+</style>
+<template>
+  <view>
+
+  </view>
+</template>
+<script>
+  import wepy from 'wepy'
+//  import { connect } from 'wepy-redux'
+
+//  @connect({
+//    num(state) {
+//      return state.counter.num
+//    }
+//  }, {
+//    addNum: num => {}
+//  })
+
+  export default class extends wepy.page {
+    config = {
+      navigationBarTitleText: '分类'
+    }
+    components = {
+
+    }
+
+    data = {
+    }
+
+    methods = {
+
+    }
+
+    events = {
+
+    }
+
+    onLoad() {
+
+    }
+  }
+</script>
